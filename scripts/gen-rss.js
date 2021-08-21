@@ -29,14 +29,22 @@ async function generatorRss() {
     const { content, data = {}, isEmpty } = matterData;
 
     if (isEmpty) return; // skip empty
+    const {
+      title = '',
+      url,
+      date = '',
+      description = '',
+      tag = '',
+      author = '',
+    } = data;
 
     rssFeed.item({
-      title: data.title || '',
-      url: data.url ? data.url : baseUrl + '/' + getFileName(postName),
-      date: data.date || '',
-      description: data.description || '',
-      categories: data.tag.split(', '),
-      author: data.author || '',
+      title: title,
+      url: url ? url : baseUrl + '/' + getFileName(postName),
+      date: date,
+      description: description,
+      categories: tag.split(', '),
+      author: author,
     });
   }
 
