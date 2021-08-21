@@ -6,7 +6,7 @@ function Footer(props: IFooterProps) {
   return (
     <footer className="text-sm text-center my-8 blog-post leading-relaxed">
       <p>
-        <a href="/rss" aria-label="rss 订阅">
+        <a href="/rss.xml" aria-label="rss 订阅">
           Rss订阅
         </a>
       </p>

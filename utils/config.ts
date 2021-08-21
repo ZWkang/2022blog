@@ -22,7 +22,7 @@ export const navs = [
   {
     name: 'Rss',
     description: '订阅Rss',
-    path: '/rss',
+    path: '/rss.xml',
   },
 ];
 
