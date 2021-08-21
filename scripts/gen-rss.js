@@ -35,7 +35,7 @@ async function generatorRss() {
       date = '',
       description = '',
       tag = '',
-      author = '',
+      author = { name: '' },
     } = data;
 
     rssFeed.item({
@@ -44,7 +44,7 @@ async function generatorRss() {
       date: date,
       description: description,
       categories: tag.split(', '),
-      author: author,
+      author: author.name,
     });
   }
 
